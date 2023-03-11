@@ -27,7 +27,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i> 
+                        <i class="nav-icon fa fa-barcode"></i> 
                         {{-- <i class="fa-solid fa-cherries"></i> --}}
                         <p>
                             Products
@@ -120,7 +120,7 @@
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
+                        <i class="nav-icon fas fa-user-friends"></i>
                         <p>
                             Users
                             <i class="fas fa-angle-left right"></i>
@@ -128,14 +128,14 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/examples/invoice.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="register" class="nav-link">
+                                <i class="fas fa-user-plus nav-icon"></i>
                                 <p>Add New User</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/examples/invoice.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="users" class="nav-link">
+                                <i class="fa fa-users nav-icon"></i>
                                 <p>All Users</p>
                             </a>
                         </li>

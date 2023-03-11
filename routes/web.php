@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::group(['middlewhere' => 'guest'], function () {
     Route::post('login', [AuthController::class, 'login'])->name('login');
     Route::get('register', [AuthController::class, 'register_view'])->name('register');
     Route::post('register', [AuthController::class, 'register'])->name('register');
+    Route::get('users', [UsersController::class, 'index'])->name('users');
+    Route::get('useredit/{id}', [UsersController::class, 'useredit'])->name('useredit');
+    Route::put('user-update/{id}', [UsersController::class, 'userupdate'])->name('user-update');
 });
 
 Route::group(['middlewhere' => 'auth'], function () {

@@ -39,7 +39,8 @@ class AuthController extends Controller
         User::create([
             'name'=>$request->name,
             'email'=>$request->email,
-            'password'=>\Illuminate\Support\Facades\Hash  ::make($request->password)
+            'role'=>$request->role,
+            'password'=>\Illuminate\Support\Facades\Hash::make($request->password)
         ]);
         // login here 
         if(\Illuminate\Support\Facades\Auth::attempt($request->only('email', 'password'))){

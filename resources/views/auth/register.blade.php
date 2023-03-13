@@ -54,6 +54,13 @@
                             <p class="text-danger">{{ $errors->first('email') }}</p>
                         @endif
                     </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                    <select name="role" class="form-control" id="role">
+                        <option>Employee</option>
+                        <option>Manager</option>
+                      </select>
+                    </div>
 
                     <div class="form-group">
                         <label>Password</label>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UsersController;
 
 /*
@@ -30,6 +31,13 @@ Route::group(['middlewhere' => 'guest'], function () {
     Route::get('users', [UsersController::class, 'index'])->name('users');
     Route::get('useredit/{id}', [UsersController::class, 'useredit'])->name('useredit');
     Route::put('user-update/{id}', [UsersController::class, 'userupdate'])->name('user-update');
+    
+    // this is product 
+    Route::get('products', [ProductController::class, 'index'])->name('products');
+    Route::get('productedit/{id}', [ProductController::class, 'productedit'])->name('productedit');
+    Route::get('addproduct', [ProductController::class, 'addproduct'])->name('add-product');
+    Route::put('product-update/{id}', [ProductController::class, 'productupdate'])->name('product-update');
+    Route::get('productdelete/{id}', [ProductController::class, 'delete'])->name('pruductdelete');
 });
 
 Route::group(['middlewhere' => 'auth'], function () {

@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Users</h1>
+                        <h1 class="m-0">New Product</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -25,44 +25,59 @@
         <section class="content">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Edit User Details</h3>
+                    <h3 class="card-title">Add New Product</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form action="/user-update/{{$user->id}}" method="POST">
+                <form action="/product-add" method="POST">
                     {{csrf_field()}}
-                    {{method_field('PUT')}}
+                    {{method_field('POST')}}
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">User Full Name </label>
-                            <input type="text" name="name" class="form-control" id="userName" value="{{$user->name}}">
+                            <label for="productName">Product Name </label>
+                            <input type="text" name="product_name" class="form-control" id="productName" placeholder="Product Name">
                         </div>
                         <div class="form-group">
-                            <label for="InputEmail1">Email address</label>
-                            <input type="email" name="email" class="form-control" id="InputEmail1" value="{{$user->email}}">
+                            <label for="description">Description</label>
+                            <input type="text" name="description" class="form-control" id="description" placeholder="Description">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputEmail1">Product Type</label>
+                            <input type="text" name="product_type" class="form-control" id="product_type" placeholder="Product Type">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="text" name="price" class="form-control" id="price" placeholder="Price">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputEmail1">Comment</label>
+                            <input type="text" name="comment" class="form-control" id="comment" placeholder="Comment">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputEmail1">Condition</label>
+                            <input type="text" name="condition" class="form-control" id="condition" placeholder="Condition">
                         </div>
                         
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" value="{{$user->password}}">
-                        </div>
-                        <div class="form-group">
+
+                        {{-- <div class="form-group">
                             <label for="role">Role</label>
                         <select name="role" class="form-control" id="role" value="{{$user->role}}">
-                            <option @if ( $user->role == "Employee")
+                            <option @if ( $product->role == "Employee")
                                 selected
                             @endif>Employee</option>
-                            <option @if ( $user->role == "Manager")
+                            <option @if ( $product->role == "Manager")
                                 selected
                             @endif>Manager</option>
                           </select>
-                        </div>
+                        </div> --}}
+
+
                     </div>
                     <!-- /.card-body -->
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        <a href="/users" class="btn btn-danger">Cancel</a>
+                        <a href="/products" class="btn btn-danger">Cancel</a>
                     </div>
                 </form>
             </div>
